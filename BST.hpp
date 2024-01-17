@@ -25,6 +25,7 @@ public:
     void inOrderTraversal() const;
     void preOrderTraversal() const;
     void postOrderTraversal() const;
+    void levelOrderTraversal() const;
     
 private:
     Node* search(Node* root,const T& target) const;
