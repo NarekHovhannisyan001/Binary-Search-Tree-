@@ -339,6 +339,29 @@ void BST<T>::postOrderTraversal(Node *node) const
 }
 
 
+template<class T>
+void AVL<T>::levelOrderTraversal() const {
+    if (!root) return root;
+
+    std::queue<Node *> queue;
+    queue.push(root);
+
+    while (!queue.empty())
+    {
+        Node* curr = queue.front();
+        queue.pop();
+        std::cout << curr->val << "  ";
+
+        if (curr->left) {
+            queue.push(curr->left);
+        }
+        if (curr->right) {
+            queue.push(curr->right);
+        }
+    }
+    
+
+}
 
 
 #endif // BST_TPP
